@@ -1,0 +1,1 @@
+JWT_SECRET="676cfd34-e706-4cce-87ca-97f947c43bd4" JWT_USER="user1@sideinc.com" node bin/generateToken.js

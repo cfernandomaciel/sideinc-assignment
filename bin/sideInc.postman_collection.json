@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "d7dd816d-696f-473a-8288-bfbacb1b53d3",
+		"name": "sideInc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "253556"
+	},
+	"item": [
+		{
+			"name": "getPropertyByCity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query GetPropertyByCity($city: String!) {\n  getPropertyByCity(city: $city) {\n    privateRemarks\n    showingContactName\n    property {\n      roof\n      cooling\n      style\n      area\n      bathsFull\n      bathsHalf\n      stories\n      fireplaces\n      flooring\n      heating\n      bathrooms\n      foundation\n      laundryFeatures\n      occupantName\n      ownerName\n      lotDescription\n      pool\n      subType\n      bedrooms\n      interiorFeatures\n      lotSize\n      areaSource\n      maintenanceExpense\n      additionalRooms\n      exteriorFeatures\n      water\n      view\n      lotSizeArea\n      subdivision\n      construction\n    }\n    mlsId\n    showingContactPhone\n    terms\n    showingInstructions\n    office {\n      brokerid\n      contact {\n        cell\n        email\n        office\n      }\n      name\n      servingName\n    }\n    leaseTerm\n    disclaimer\n    originalListPrice\n    address {\n      crossStreet\n      state\n      country\n      postalCode\n      streetName\n      streetNumberText\n      city\n      streetNumber\n      full\n      unit\n    }\n    agreement\n    listDate\n    agent {\n      id\n      address\n      contact {\n        cell\n        email\n        office\n      }\n      firstName\n      lastName\n    }\n    modified\n    school {\n      elementarySchool\n      middleSchool\n      highSchool\n      district\n    }\n    photos\n    listPrice\n    internetAddressDisplay\n    listingId\n    mls {\n      status\n      statusText\n      originatingSystemName\n      originalEntryTimestamp\n      area\n      areaMinor\n      daysOnMarket\n    }\n    internetAddressDisplay\n    geo {\n      county\n      lat\n      lng\n      directions\n      marketArea\n    }\n    tax {\n      id\n      taxAnnualAmount\n      taxYear\n    }\n    coAgent {\n      id\n      firstName\n      lastName\n      address\n      contact {\n        cell\n        email\n        office\n      }\n    }\n    sales {\n      closeDate\n      closePrice\n      contractDate\n      agent {\n        id\n        address\n        contact {\n          cell\n          email\n          office\n        }\n        firstName\n        lastName\n      }\n    }\n    leaseType\n    virtualTourUrl\n    \n    remarks\n    association {\n      name\n      amenities\n      fee\n      frequency     \n    }\n    internetEntireListingDisplay\n  }\n}",
+						"variables": "{\n    \"city\": \"Houston\"\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
