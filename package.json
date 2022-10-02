@@ -1,0 +1,23 @@
+{
+  "name": "senior-backend-graphql",
+  "version": "1.0.0",
+  "description": "graphql and simplyrets take-home assignment for interview candidates.",
+  "main": "index.js",
+  "engines": {
+    "node": "^16"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "3.10.2",
+    "graphql": "16.6.0"
+  },
+  "devDependencies": {
+    "jest": "27.5.1"
+  },
+  "license": "UNLICENSED",
+  "author": "Side Inc.",
+  "repository": "https://github.com/cfernandomaciel/sideinc-assignment.git"
+}
